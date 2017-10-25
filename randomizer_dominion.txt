@@ -1,0 +1,30 @@
+ 
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+ 
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+ 
+		List<String> _cartas = Arrays.asList("Ambassador", "Artisan", "Bandit", "Bazaar","Bureaucrat", "Cellar", 
+		"Chapel", "Council Room", "Festival", "Gardens", "Harbinger", "Laboratory", "Library", "Market", 
+		"Merchant", "Militia", "Mine","Moat", "Moneylender", "Poacher", "Remodel", "Sentry", 
+		"Smithy", "Throne Room","Vassal", "Village", "Witch", "Workshop");
+ 
+		ArrayList<String> cartas = new ArrayList<String>();
+		cartas.addAll(_cartas);
+ 
+		int cant_cartas = 10;
+ 
+ 
+		for(int i = 0; i < cant_cartas; i++){
+			int eleccion = (int)(Math.random() * (cartas.size()-1));
+			System.out.println("Agarrate 10 " + cartas.get(eleccion));
+			cartas.remove(eleccion);
+		}
+ 
+	}
+}
